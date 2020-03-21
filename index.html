@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>COVID-19 STATUS</title>
+    <link rel="shortcut icon" href="favicon.png" type="image/x-icon">
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <h1>COVID-19 STATUS</h1>
+        <div class="c-img">
+            <img src="perfil.png" alt="">
+        </div>
+    </header>
+    <main class="main">
+        <div class="card">
+            <div class="card-header">
+                <h3>SELECCIONAR UN PAÍS: </h3>
+                <select id="countries" onchange="getDatosByCountry()">
+                    <option value="0">Cargando ...</option>
+                    <!-- Get Countries -->
+                </select>
+            </div>
+            <div class="card-body">
+                <table>
+                    <thead>
+                        <tr>
+                            <th></th>
+                            <th>Casos</th>
+                            <th>Última  Actualización</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>Confirmados</td>
+                            <td><span id="confirmed"></span></td>
+                            <td><span id="date_confirmed"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Fallecidos</td>
+                            <td><span id="deaths"></span></td>
+                            <td><span id="date_deaths"></span></td>
+                        </tr>
+                        <tr>
+                            <td>Recuperados</td>
+                            <td><span id="recovered"></span></td>
+                            <td><span id="date_recovered"></span></td>
+                        </tr>
+                    </tbody>
+                </table> 
+            </div>          
+        </div>   
+    
+    </main>
+    <footer>
+        <p>Creado por Aimar Andony | Copyright © Todos los derechos reservados</p>
+    </footer>
+    
+    <script src="https://momentjs.com/downloads/moment.js"></script>
+    <script src="https://momentjs.com/downloads/moment-with-locales.js"></script>
+    <script src="app.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
+@import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+
+    box-sizing: border-box;
+}
+body{
+    /* background: #0932a3; */
+
+    background: linear-gradient(to right, #0932a3, #170661);
+    width: 100%;
+    height: 100vh;
+
+    font-family: 'Titillium Web', sans-serif;
+    color: #fff;
+
+    
+}
+header{
+    height: 15vh;
+    background: #0202023f;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+header h1{
+    padding-left: 20px;    
+}
+header .c-img{
+    width: 80px;
+    padding-right: 20px;
+}
+header .c-img img{
+    width: 100%;
+}
+.main{
+    height: 80vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+footer{
+    background: #02020231;
+    height: 5vh;   
+}
+footer p{
+    text-align: center;
+    font-size: 15px;
+    line-height: 35px;
+    margin: 0;
+}
+.card{
+    width: 850px;
+    border: 2px solid #fff;
+    border-radius: 10px;
+    background: #ffffff11;
+}
+.card-header{
+    padding: 20px;
+    border-bottom: 2px solid #fff;
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+.card-header #countries{
+    outline: none;
+    background: none;
+    color: #fff;    
+    -webkit-appearance: none;
+
+    font-size: 15px;
+    padding: 10px;
+    background-image: url(arrow.png);
+    background-repeat: no-repeat, repeat;
+    background-position: right .7em top 50%, 0 0;
+    background-size: .65em auto, 100%;
+}
+.card-header #countries option{
+    background: #252fc4;
+}
+.card-body{    
+    padding: 30px;
+}
+
+table{  
+    width: 100%; 
+    text-align: left;    
+    border-collapse: collapse; 
+    font-size: 16px;
+}
+th{     
+    font-weight: normal;     
+    text-align: center;
+    text-transform: uppercase;
+    padding: 8px;     
+    border-bottom: 1px solid #fff;
+    background: #02020277;
+}
+td{    
+    padding: 8px;     
+    text-align: center;
+    border-bottom: 1px solid #fff;
+    border-top: 1px solid transparent; 
+}
+tr:hover td{ 
+    background: #ffffff27; 
+}
