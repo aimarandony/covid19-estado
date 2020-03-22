@@ -22,20 +22,19 @@ function getCountries() {
         });
 }
 
-function getLastCountCasesByCountry(country, status, divStatus, divUpdateDate) {
+function getLastDataCountry(country, status, divStatus) {
 
     let url_data_by_country = `https://api.covid19api.com/total/country/${country}/status/${status}`;
     let div_status = document.getElementById(divStatus);
-    let div_update_date = document.getElementById(divUpdateDate);
+    let div_update_date = document.getElementById('date_confirmed');
 
     fetch(url_data_by_country)
         .then(resp => resp.json())
         .then(resp => {
-            div_status.innerHTML = JSON.stringify(resp[resp.length - 1].Cases);
+            div_status.innerHTML = resp[resp.length - 1].Cases;
 
             let date = resp[resp.length - 1].Date.substring(0, 10);
             div_update_date.innerHTML = moment(date).format('D [de] MMMM [a las] h:mm A');
-            // format('D [de] MMMM [del] YYYY, h:mm:ss A');
         });
 }
 
@@ -47,9 +46,7 @@ function getDatosByCountry() {
         country = 'Afghanistan';
     }
 
-    // title.innerHTML = country;
-
-    getLastCountCasesByCountry(country, 'confirmed', 'confirmed', 'date_confirmed');
-    getLastCountCasesByCountry(country, 'deaths', 'deaths', 'date_deaths');
-    getLastCountCasesByCountry(country, 'recovered', 'recovered', 'date_recovered');
+    getLastDataCountry(country, 'confirmed', 'confirmed');
+    getLastDataCountry(country, 'deaths', 'deaths');
+    getLastDataCountry(country, 'recovered', 'recovered');
 }
