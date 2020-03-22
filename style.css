@@ -1,4 +1,3 @@
-@import url('https://fonts.googleapis.com/css?family=Titillium+Web&display=swap');
 @import url('https://fonts.googleapis.com/css?family=Lato&display=swap');
 
 *{
@@ -8,105 +7,135 @@
     box-sizing: border-box;
 }
 body{
-    /* background: #0932a3; */
-
-    background: linear-gradient(to right, #0932a3, #170661);
     width: 100%;
     height: 100vh;
 
-    font-family: 'Titillium Web', sans-serif;
-    color: #fff;
+    font-family: 'Lato', sans-serif;
+    color: #011b14;
 
-    
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 100px auto 50px;
+    grid-template-areas: "header" "main" "footer";
 }
+
 header{
-    height: 15vh;
-    background: #0202023f;
+    background: #1DC879;
+    grid-area: header;
+}
+main{
+    background: #fff;
+    grid-area: main;
 
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-}
-header h1{
-    padding-left: 20px;    
-}
-header .c-img{
-    width: 80px;
-    padding-right: 20px;
-}
-header .c-img img{
-    width: 100%;
-}
-.main{
-    height: 80vh;
     display: flex;
     justify-content: center;
     align-items: center;
 }
 footer{
-    background: #02020231;
-    height: 5vh;   
+    background: #baeeca;
+    grid-area: footer;
 }
-footer p{
-    text-align: center;
-    font-size: 15px;
-    line-height: 35px;
-    margin: 0;
-}
-.card{
-    width: 850px;
-    border: 2px solid #fff;
-    border-radius: 10px;
-    background: #ffffff11;
-}
-.card-header{
-    padding: 20px;
-    border-bottom: 2px solid #fff;
-
+header{
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    padding: 0 20px;
+    box-shadow: #011b1449 0px 5px 5px;
+
+    z-index: 1;
 }
-.card-header #countries{
+header h1{
+    font-size: 19px;
+    font-weight: bolder;
+    text-align: center;
+    margin: 10px 0;
+
+    color: #011b14;
+}
+header .c-img{
+    width: 50px;
+}
+header .c-img img{
+    width: 100%;
+}
+main .card{
+    background: #ade7cc;
+    width: 800px;
+    padding: 30px;
+
+    border: 2px solid #4d907e;
+    border-radius: 10px;
+    box-shadow: #0f8061 0 0 10px;
+}
+main .card .card-header{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+    padding-bottom: 30px;
+    border-bottom: 1px solid #baeeca;
+}
+main .card .card-header h3{
+    font-size: 24px;
+    padding-bottom: 20px;
+}
+main .card .card-header select{
     outline: none;
     background: none;
-    color: #fff;    
+    border: 3px solid #1DC879;
     -webkit-appearance: none;
 
-    font-size: 15px;
+    font-size: 17px;
     padding: 10px;
     background-image: url(arrow.png);
     background-repeat: no-repeat, repeat;
     background-position: right .7em top 50%, 0 0;
     background-size: .65em auto, 100%;
 }
-.card-header #countries option{
-    background: #252fc4;
-}
-.card-body{    
-    padding: 30px;
+main .card .card-body{
+    padding-top: 30px;
 }
 
-table{  
-    width: 100%; 
-    text-align: left;    
-    border-collapse: collapse; 
-    font-size: 16px;
+main .card .card-body .fecha{
+    background: #51df9d;
+    border: 1px solid #145544;
+    border-radius: 10px;
+    padding: 10px;
+    margin-bottom: 20px;
 }
-th{     
-    font-weight: normal;     
-    text-align: center;
-    text-transform: uppercase;
-    padding: 8px;     
-    border-bottom: 1px solid #fff;
-    background: #02020277;
+main .card .card-body .fecha p{
+    font-weight: bold;
+    font-size: 14px;
 }
-td{    
-    padding: 8px;     
-    text-align: center;
-    border-bottom: 1px solid #fff;
-    border-top: 1px solid transparent; 
+main .tabs{
+    display: flex;
+    justify-content: space-around;
+    margin: 50px 0 20px;
 }
-tr:hover td{ 
-    background: #ffffff27; 
+main .tabs .tab{
+    background: #eafaf3;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 20px;
+    border: 1px solid #07584391;
+    border-radius: 10px;
+
+    font-size: 20px;
+    transition: all .3s ease;
+}
+main .tabs .tab:hover{
+    transform: rotate(10deg);
+}
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+    color: #053327;
+    font-size: 13px;
 }
