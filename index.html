@@ -13,10 +13,10 @@
     <header>
         <h1>COVID-19 STATUS</h1>
         <div class="c-img">
-            <img src="perfil.png" alt="">
+            <img src="fire.png" alt="">
         </div>
     </header>
-    <main class="main">
+    <main>
         <div class="card">
             <div class="card-header">
                 <h3>SELECCIONAR UN PAÍS: </h3>
@@ -26,32 +26,23 @@
                 </select>
             </div>
             <div class="card-body">
-                <table>
-                    <thead>
-                        <tr>
-                            <th></th>
-                            <th>Casos</th>
-                            <th>Última  Actualización</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr>
-                            <td>Confirmados</td>
-                            <td><span id="confirmed"></span></td>
-                            <td><span id="date_confirmed"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Fallecidos</td>
-                            <td><span id="deaths"></span></td>
-                            <td><span id="date_deaths"></span></td>
-                        </tr>
-                        <tr>
-                            <td>Recuperados</td>
-                            <td><span id="recovered"></span></td>
-                            <td><span id="date_recovered"></span></td>
-                        </tr>
-                    </tbody>
-                </table> 
+                <div class="fecha">
+                    <p>Última Actualización: <span id="date_confirmed"></span></p>
+                </div>
+                <div class="tabs">
+                    <div class="tab">
+                        <h4 id="confirmed"></h4>
+                        <p>Confirmados</p>
+                    </div>
+                    <div class="tab">
+                        <h4 id="deaths"></h4>
+                        <p>Fallecidos</p>
+                    </div>
+                    <div class="tab">
+                        <h4 id="recovered"></h4>
+                        <p>Recuperados</p>
+                    </div>
+                </div> 
             </div>          
         </div>   
     
